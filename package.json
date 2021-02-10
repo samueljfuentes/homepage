@@ -1,0 +1,13 @@
+{
+  "name": "samuel-fuentes-website",
+  "version": "1.0.0",
+  "description": "Personal and professional website for Samuel Fuentes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass styles/sass/main.scss styles/css/main.css"
+  },
+  "author": "Samuel Fuentes",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}

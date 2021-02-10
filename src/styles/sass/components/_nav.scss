@@ -1,0 +1,97 @@
+.nav {
+  border: none;
+  min-height: inherit;
+
+  @media (min-width: $screen-tablet) {
+    margin: 10px;
+  }
+
+  &__button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+    background-color: $color-base;
+    padding: 20px;
+    margin: 0;
+    border: none;
+    outline: none;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__iconbar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $color-contrast;
+    cursor: pointer;
+
+    &+.nav__iconbar {
+      margin-top: 4px;
+    }
+  }
+
+  &__collapse {
+    background-color: $color-base;
+    margin: 10px -5px;
+    box-shadow: none;
+    border-color: transparent;
+    max-height: 340px;
+    overflow-y: auto;
+    overflow-x: visible;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-top: 1px solid transparent;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      height: auto;
+      width: auto;
+      overflow: visible;
+      border-top: 0;
+      margin: 0;
+      padding: 30px 0;
+    }
+  }
+
+  &__menu {
+    padding: 20px;
+    margin: .25px -15px;
+    list-style: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__item-container {
+    position: relative;
+    display: block;
+    
+    @media screen and (min-width: 768px) {
+      &+.nav__item-container {
+        border-left: 1px solid $color-contrast;
+      }
+    }
+
+  }
+
+  &__menu-item {
+    display: block;
+    position: relative;
+    color: $color-lightbase;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: none;
+    transition: all .1s linear;
+
+    @media screen and (min-width: 768px) {
+      padding: 10px 40px;
+    }
+  }
+}
